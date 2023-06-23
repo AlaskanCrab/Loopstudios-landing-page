@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  ul li {
+    @apply relative tracking-[1px];
+  }
+  ul li::after {
+    @apply content-[''] bg-[#ffffff] h-[2px] w-[0%] left-0 -bottom-[2px] scale-x-50 rounded-xl absolute duration-300;
+  }
+  ul li:hover::after {
+    @apply w-[100%];
+  }
+  li {
+    @apply cursor-pointer;
+  }
+  body {
+    @apply max-w-full max-h-full select-none;
+  }
+}
+@layer components {
+  .card {
+    @apply text-white font-light relative cursor-pointer hover:opacity-50 hover:transition-opacity w-[16rem] h-[28rem] max-xl:w-[12rem] 
+    max-xl:h-[24rem] max-md:hidden;
+  }
+}
